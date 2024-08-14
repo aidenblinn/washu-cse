@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+  </head>
+  <body>
+    <label for="field1">Input 1</label>
+    <input type="text" name="field1" id="field1">
+    <br>
+    <label for="field2">Input 2</label>
+    <input type="text" name="field2" id="field2">
+    <br>
+    <label for="+" id="form">+</label>
+    <input type="radio" name="operation" value="+" id="+">
+    <label for="-">-</label>
+    <input type="radio" name="operation" value="-" id="-">
+    <label for="*">*</label>
+    <input type="radio" name="operation" value="*" id="*">
+    <label for="/">/</label>
+    <input type="radio" name="operation" value="/" id="/">
+    <br>
+    <p id="result"></p>
+    <script>
+
+      document.getElementById("field1").addEventListener("change", calculate, false);
+      document.getElementById("field2").addEventListener("change", calculate, false);
+      document.getElementById("+").addEventListener("click", calculate, false);
+      document.getElementById("-").addEventListener("click", calculate, false);
+      document.getElementById("*").addEventListener("click", calculate, false);
+      document.getElementById("/").addEventListener("click", calculate, false);
+
+      var operation = ""
+      function calculate() {
+        var operation_list = document.getElementsByName("operation");
+        for (i = 0; i < operation_list.length; i++) {
+          if (operation_list[i].checked) {
+            operation = operation_list[i].value;
+          };
+        };
+
+
+        var field1 = parseInt(document.getElementById("field1").value);
+        var field2 = parseInt(document.getElementById("field2").value);
+        var message = "Result: "
+        if (operation == "+") {
+          document.getElementById("result").innerHTML = message.concat(field1 + field2);
+        };
+        if (operation == "-") {
+          document.getElementById("result").innerHTML = message.concat(field1 - field2);
+        };
+        if (operation == "*") {
+          document.getElementById("result").innerHTML = message.concat(field1 * field2);
+        };
+        if (operation == "/") {
+          if (field2 == 0) {
+            document.getElementById("result").innerHTML = "don't divide by zero!";
+          }
+          else {
+            document.getElementById("result").innerHTML = message.concat(field1 / field2);
+          }
+        };
+      }
+    </script>
+  </body>
+</html>

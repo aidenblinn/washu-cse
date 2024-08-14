@@ -1,0 +1,63 @@
+﻿<h1>Hi {{currentUser.firstName}}!</h1>
+<p>You have successfully logged in!</p>
+<h2>Submit a Problem</h2>
+<form [formGroup]="problemForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="name">Problem Name</label>
+        <input type="text" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+        <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+            <div *ngIf="f.name.errors.required">Problem name is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="operations">Operations</label>
+        <input type="text" formControlName="operations" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.operations.errors }" />
+        <div *ngIf="submitted && f.operations.errors" class="invalid-feedback">
+            <div *ngIf="f.operations.errors.required">Operations are required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="answers">Answer (Optional)</label>
+        <input type="text" formControlName="answers" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="tags">Tags (Optional)</label>
+        <input type="text" formControlName="tags" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="submitType">Options</label>
+        <select formControlName="submitType" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.submitType.errors }">
+            <option value="add">Add Problem</option>
+            <option value="edit">Edit Problem</option>
+        </select>
+        <select formControlName="privacy" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.submitType.errors }">
+            <option value="private">Private</option>
+            <option value="public">Public</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <button [disabled]="loading" class="btn btn-primary">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Submit
+        </button>
+    </div>
+</form>
+<h3>Submitted problems:</h3>
+<ul>
+    <li *ngFor="let problem of problems">
+        {{problem.name}}<a [routerLink]="" (click)="copyProblem(problem.id)" *ngIf="problem.ownerName != currentUser.username"> - Add to Collection</a><a (click)="deleteProblem(problem.id)" class="text-danger" *ngIf="problem.ownerName == currentUser.username"> - Delete</a>
+        <ul>
+            <li>Owner: {{problem.ownerName}}</li>
+            <li>Privacy: {{problem.private}}</li>
+            <li>Operations: {{problem.operations}}</li>
+            <li>Answer: {{problem.answers}}</li>
+            <li>Tags: {{problem.tags}}</li>
+        </ul>
+    </li>
+</ul>
+<h3>Users:</h3>
+<ul>
+    <li *ngFor="let user of users">
+        {{user.username}}
+    </li>
+</ul>

@@ -1,0 +1,57 @@
+#heroimg {
+  width:100%;
+}
+
+@media only screen and (max-width:768px) {
+  .trilogypic {
+    margin-bottom:25px;
+  }
+  .collinspic {
+    margin-bottom:15px;
+  }
+}
+
+.navbar-nav {
+  text-align:center;
+}
+
+.trilogypic {
+  padding-top:10px;
+}
+
+.hungerseries {
+  padding-top:30px;
+  padding-bottom:30px;
+  background-color: #152819;
+}
+
+.author {
+  padding-top:30px;
+  padding-bottom:30px;
+}
+
+.about {
+  margin-left:30px;
+  margin-right:30px;
+}
+
+.books {
+  margin-left:30px;
+  margin-right:30px;
+}
+
+.hungertext {
+  color:#FFFFFF;
+}
+
+.body {
+  font-family:"Times New Roman", serif;
+}
+
+.spacing {
+  height:30px;
+}
+
+.header {
+  margin-bottom:10px;
+}

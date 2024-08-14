@@ -1,0 +1,82 @@
+.form {
+  background-color: lightyellow;
+}
+
+#pagetitle {
+  background-color: lightblue;
+  padding-top:5px;
+  padding-bottom:5px;
+}
+
+.listing {
+  padding-bottom:10px;
+}
+
+.eventtime {
+  font-weight:bold;
+  font-size:13px;
+  margin-bottom:0px;
+}
+
+.eventname {
+  font-size:13px;
+  margin-bottom:0px;
+}
+
+.daynumber {
+  color:red;
+  padding-bottom:12px;
+}
+
+.appointment {
+  font-size:10pt;
+  color:navy;
+  margin-bottom:0;
+}
+
+.work {
+  font-size:10pt;
+  color:darkgreen;
+  margin-bottom:0;
+}
+
+.fun {
+  font-size:10pt;
+  color:purple;
+  margin-bottom:0;
+}
+
+.sharebutton {
+  padding-bottom:20px;
+  font-size:12px;
+  height:20px;
+}
+
+.deletebutton {
+  padding-bottom:20px;
+  font-size:12px;
+  height:20px;
+}
+
+tr > th {
+  text-align:center;
+}
+
+#calendar {
+  padding:20px;
+}
+
+.create {
+  display: inline-block;
+  padding-top:3px;
+  padding-bottom:3px;
+  text-align:center;
+}
+
+#account {
+  background-color: lightgreen;
+  display: inline-block;
+  padding-top:12px;
+  padding-bottom:12px;
+  text-align:center;
+}

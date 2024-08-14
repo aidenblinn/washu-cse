@@ -1,0 +1,215 @@
+/* .App {
+  text-align: center;
+} */
+
+
+.Home {
+  text-align: left;
+}
+
+#welcomeHeader, .Login {
+  text-align: center;
+}
+#scoreLabel {
+  text-align: center;
+  font-size: 60px;
+  color: palevioletred;
+}
+
+#goToForm {
+  font-size: 30px;
+}
+
+#inspirationalAuthor {
+  margin-left: 5px;
+}
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.8;
+  font-size: calc(10px + 2vmin);
+}
+
+#submitButton {
+  text-align: center;
+}
+
+#symptomItems input{
+  margin-right: 4px;
+}
+
+#symptomItems label{
+  margin-right: 10px;
+}
+
+#moodItems {
+  text-align:center;
+}
+#username,
+#password,
+#newpassword {
+  margin-right: 10px;
+}
+#newusername {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4caf50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4caf50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+#closeButton {
+  float: right;
+  color: white;
+  background-color: red;
+  border: none;
+}
+
+#colorButtons {
+  text-align: center;
+}
+
+#blueGraph {
+  background-color: rgb(13, 195, 255);
+  padding: 20px;
+  border: none;
+  margin-left: 8px;
+}
+
+#greenGraph {
+  background-color: rgb(60, 179, 113);
+  padding: 20px;
+  border: none;
+  margin-left: 8px;
+}
+
+#redGraph {
+  background-color: rgb(255, 0, 0);
+  padding: 20px;
+  border: none;
+  margin-left: 8px;
+}
+
+#purpleGraph {
+  background-color: rgb(106, 90, 205);
+  padding: 20px;
+  border: none;
+  margin-left: 8px;
+}
+
+#grayGraph {
+  background-color: rgb(180, 180, 180);
+  padding: 20px;
+  border: none;
+  margin-left: 8px;
+}
+
+.graphs .column {
+  margin: 50px 20px 0px 20px;
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+.scoreGraph {
+  margin-top: 50px;
+}
+
+.column {
+  flex: 50%;
+}
+
+.row {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.home {
+  width: 100%;
+}
+
+#submitFormButton {
+  margin-top: 20px;
+  color: white;
+  background-color: rgb(28, 116, 248);
+  border: none;
+}
+
+#takeForm, #existingUserLogin, #newUserButton {
+  color: white;
+  background-color: rgb(28, 116, 248);
+  border: none;
+  margin-left: 5px;
+}
+
+#logoutButton {
+  color: white;
+  background-color: rgb(255, 0, 0);
+  border: none;
+  margin-bottom: 20px;
+}
+
+#formResults {
+  text-align: left;
+}
+
+#homeWelcome {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 40px;
+}
+
+#sadImage, #okayImage {
+  margin-bottom: 7px;
+}
+
+.stress {
+  font-size: 16px;
+}
+
+#moderateStress {
+  text-align: center;
+  margin-right: 37%;
+  margin-left: 37%;
+}

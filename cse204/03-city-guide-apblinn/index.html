@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+    <head>
+      <meta name="description" content="A traveler's guide to the city of
+      Dallas, TX, from the perspective of someone born and raised in the city!">
+      <title>Dallas Traveler's Guide</title>
+      <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+      <div class="header">
+        <p id="headertext"><strong>Dallas Traveler's Guide</strong>
+          ~~~~~ <a href="#intro">Intro</a>
+          ~~~~~ <a href="#places">Places to go</a>
+          ~~~~~ <a href="#coffee">Coffee </a>
+          ~~~~~ <a href="#food">Food </a>
+          ~~~~~ <a href="#form">Form </a>
+        </p>
+      </div>
+      <div class="padded" id="introduction">
+        <br>
+        <a name="intro"></a>
+        <h1 id="title">A traveler's guide to Dallas, TX</h1>
+        <p class="welcome">
+          Hi there! Welcome to my travel page for Dallas, TX. My name's Aiden,
+          and I'll be your guide today. I was born and raised in Dallas, so I
+          know a lot about the city. I'll be giving you some recommendations
+          on where to go, what to do, and (most importantly) what to eat! Enjoy!
+        </p>
+        <p id="fillform">Have any feedback? Let me know by filling out <a class="link" href="#form">my form</a>.</p>
+        <br>
+      </div>
+      <div id="pictures">
+        <br>
+        <img class="pics" src="panorama.jpg" alt="Picture of the
+        Dallas skyline with the Texas flag in view.">
+        <br>
+      </div>
+      <div class="padded" id="places">
+        <br>
+        <a name="places"></a>
+        <h2 class="sections">Places to go</h2>
+        <h4>Klyde Warren Park</h4>
+        <div class="parkdesc">
+          <p>Klyde Warren Park is a 5.2-acre public park in the Arts District of Downtown Dallas. First
+          opened to the public in 2012, the park is known for the delicious food trucks
+          that flank the park on all sides. Personally, I think they're great!</p>
+        </div>
+        <div class="parkdesc">
+          <p>So if you're hungry and looking for a good place to walk around,
+          look no further! You can grab some tacos or a slice of pizza at one of the many food, bring a
+          frisbee with you and toss it with a friend, or just take a seat at one of the many tables.</p>
+        </div>
+        <div class="hours">
+          <p>The park is open daily from 6am to 11pm.</p>
+        </div>
+        <!-- Google Maps location of Klyde Warren Park -->
+        <iframe id = "map" width="450" height="450"
+        src="https://maps.google.com/maps?q=Klyde%20Warren%20Park&t=&z=13&ie=UTF8&iwloc=&output=embed" ></iframe>
+        <img id = "parkpic" src="klydewarren.jpg" alt="Aerial picture of Klyde Warren Park" width = 450 height = 450>
+        <p id="source">Source: <a href="https://www.google.com/maps">Google Maps</a></p>
+        <h5>Things to do in Klyde Warren Park:</h5>
+        <ul id="parklist">
+          <li>Grab a bite at one of the food trucks</li>
+          <li>Take a stroll on a nice spring day</li>
+          <li>Use a Lime or Bird scooter to scoot around the park</li>
+        </ul>
+        <br>
+      </div>
+      <div class="padded" id="coffee">
+        <br>
+        <a name="coffee"></a>
+        <h2 class="sections">Best places to get a coffee</h2>
+        <img class="coffeepics" src="ascension.jpg" alt="A picture of the outside of Ascension Coffee" height=150 width=150>
+        <img class="coffeepics" src="houndstooth.jpg" alt="A picture of the outside of Houndstooth Coffee" height=150 width=150>
+        <img class="coffeepics" src="fiction.jpg" alt="A picture of the outside of Ficton Coffee" height=150 width=150>
+        <ol id="coffeelist">
+          <li><a class = "coffeeitem" id = "ascensionlink" href="https://ascensiondallas.com/">Ascension Coffee: This place has great espresso and an amazing menu of breakfast and lunch foods.</a></li>
+          <li><a class = "coffeeitem" href="https://www.houndstoothcoffee.com/">Houndstooth Coffee: Houndstooth Coffee has a gorgeously designed interior and a great americano.</a></li>
+          <li><a class = "coffeeitem" href="https://www.fictioncoffee.com/">Fiction Coffee: Fiction Coffee has a cozy vibe and a room in the back to do homework.</a></li>
+        </ol>
+        <br>
+        <br>
+        <br>
+      </div>
+      <div class="padded" id="food">
+        <br>
+        <a name="food"></a>
+        <h2 class="sections">Places to eat</h2>
+        <table>
+          <tr>
+            <th>Restaurant</th>
+            <th>Phone Number</th>
+            <th>Type of Food</th>
+            <th>Cost</th>
+          </tr>
+          <tr>
+            <td><a class="link" href="https://torchystacos.com/">Torchy's Tacos</a></td>
+            <td><a href="tel:972-720-9200">(972) 720-9200</a></td>
+            <td>Tex-Mex</td>
+            <td class="cost">$</td>
+          </tr>
+          <tr>
+            <td><a class="link" href="http://www.cosmiccafedallas.com/">Cosmic Cafe</a></td>
+            <td><a href="tel:214-521-6157">(214) 521-6157</a></td>
+            <td>Vegetarian</td>
+            <td class="cost">$$</td>
+          </tr>
+          <tr>
+            <td><a class="link" href="https://www.yelp.com/biz/ku-sushi-and-japanese-cuisine-dallas">Kü</a></td>
+            <td><a href="tel:214-891-0400">(214) 891-0400</a></td>
+            <td>Sushi</td>
+            <td class="cost">$$</td>
+          </tr>
+        </table>
+        <br>
+      </div>
+      <div class="padded" id="form">
+        <br>
+        <a name="form"></a>
+        <!-- feedback form to take suggestions from readers -->
+        <h2 class="sections">Feedback on the site? Let us know!</h2>
+        <form id="formyform" action="index.html" method="post">
+          <p>Email address: <input type="text" name="eaddress" class="typing"></p>
+          <p><textarea id="comments" class="typing" name="feedback" rows="8" cols="80">
+          Delete this text and type your own</textarea></p>
+          <p><input id="submit" type="submit" value="Submit"></p>
+        </form>
+        <br>
+      </div>
+    </body>

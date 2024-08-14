@@ -1,0 +1,8 @@
+| stories | CREATE TABLE `stories` (
+  `newsid` int(11) NOT NULL AUTO_INCREMENT,
+  `newstitle` varchar(255) NOT NULL,
+  `newstext` varchar(255) NOT NULL,
+  `userid` varchar(255) NOT NULL,
+  PRIMARY KEY (`newsid`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1 |
++---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+

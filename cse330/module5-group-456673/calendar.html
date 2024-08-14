@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Calendar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="calendar.css">
+  </head>
+  <body>
+    <div class="container-fluid" id = "pagetitle">
+      <h1 style="text-align: center;" id="whose">Calendar</h1>
+    </div>
+    <!-- account info, login, signup form -->
+    <div class="container-fluid" id = "topbar">
+      <div class="row">
+        <form id="account">
+          <input type="text" name="username" id="user" placeholder="username">
+          <input type="text" name="password" id="pass" placeholder="password">
+          <input type="button" name="login" value="Log in" id="login">
+          <input type="button" name="logout" value="Log out" id="logout">
+          <input type="button" name="signup" value="Sign up" id="signup">
+        </form>
+      </div>
+      <!-- event creation form with relevant options -->
+      <div class="row form">
+        <h3 style="text-align:center; margin-bottom:0;">Create Event</h3>
+      </div>
+      <div class="row form">
+        <!-- date and time -->
+        <form class="create">
+          <input type="text" name="title" placeholder="Event Title:" id="title">
+          <input type="date" name="datepicker" id="datepicker">
+          <label for="time">  Start Time:</label>
+          <input type="time" name="time" id="time">
+        </form>
+      </div>
+      <div class="row form">
+        <!-- event type -->
+        <form class="create">
+          <div style="display:inline-block;padding-right:10px;">
+            <p>Event Type:</p>
+          </div>
+          <input type="radio" id="none" name="none" value="none">
+          <label for="none">None</label>
+          <input type="radio" id="appointment" name="tag" value="appointment">
+          <label for="appointment">Appointment</label>
+          <input type="radio" id="work" name="tag" value="work">
+          <label for="work">Work</label>
+          <input type="radio" id="fun" name="tag" value="fun">
+          <label for="louie">Fun</label>
+          <input type="button" name="addevent" value="Add Event" id="addevent" style="margin-left:10px">
+        </form>
+      </div>
+    </div>
+    <!-- actual calendar itself -->
+    <div id="calendar">
+      <!-- buttons to change month -->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm">
+            <input style="float:left" type="button" name="prev" value="last month" id="prev">
+          </div>
+          <div class="col-sm">
+            <h2 style="text-align: center;" id="month"></h2>
+          </div>
+          <div class="col-sm">
+            <input style="float:right" type="button" name="next" value="next month" id="next">
+          </div>
+        </div>
+      </div>
+      <!-- table to be populated using javascript and AJAX request -->
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+          </tr>
+        </thead>
+        <tbody id="tablebody">
+        </tbody>
+      </table>
+    </div>
+    <!-- important scripts -->
+    <script src="https://classes.engineering.wustl.edu/cse330/content/calendar.min.js"></script>
+    <script src="helper.js"></script>
+    <script src="account_management.js"></script>
+    <script src="event_management.js"></script>
+    <script>
+      // For our purposes, we can keep the current month in a variable in the global scope
+      var currentMonth = new Month(2021, 2); // March 2021
+      var months = [ "January", "February", "March", "April", "May", "June",
+           "July", "August", "September", "October", "November", "December" ];
+      document.getElementById("month").innerHTML = months[currentMonth.month] + " " + currentMonth.year;
+      updateCalendar();
+
+      // Change the month when next/prev button is pressed
+      document.getElementById("next").addEventListener("click", function(event){
+        currentMonth = currentMonth.nextMonth(); // Previous month would be currentMonth.prevMonth()
+        updateCalendar(); // Whenever the month is updated, we'll need to re-render the calendar in HTML
+      }, false);
+      document.getElementById("prev").addEventListener("click", function(event){
+        currentMonth = currentMonth.prevMonth(); // Previous month would be currentMonth.prevMonth()
+        updateCalendar(); // Whenever the month is updated, we'll need to re-render the calendar in HTML
+      }, false);
+
+      // update calendar to create table based on days / weeks in current month
+      function updateCalendar(){
+        document.getElementById("month").innerHTML = months[currentMonth.month] + " " + currentMonth.year;
+        document.getElementById("tablebody").innerHTML = "";
+        var weeks = currentMonth.getWeeks();
+        for(var w in weeks){
+          var days = weeks[w].getDates();
+          var week = document.createElement("tr");
+          var i = 0;
+          for(var d in days){
+            // create table elements and insert into row (week)
+            var day = document.createElement("td");
+            day.setAttribute("style","width:calc(100%/7)");
+            week.appendChild(day)
+            if (days[i].getMonth() == currentMonth.month) {
+              var header = document.createElement("div");
+              var number = document.createElement("h6");
+              number.setAttribute("class","daynumber");
+              number.innerHTML = days[i].getDate();
+              header.appendChild(number);
+              header.setAttribute("id","number");
+              day.setAttribute("id","day-" + days[i].getDate());
+              day.appendChild(header);
+            }
+            i++;
+          }
+          document.getElementById("tablebody").appendChild(week);
+        }
+        renderEvents();
+      }
+    </script>
+  </body>
+</html>

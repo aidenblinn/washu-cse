@@ -1,0 +1,58 @@
+.todoItem {
+  margin-top:20px;
+  margin-bottom:20px;
+}
+
+.todoItem:last-of-type {
+  border-bottom:none;
+}
+
+.todoItem p {
+  width:70%;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  display:inline;
+}
+
+.completed {
+
+}
+
+.completed p {
+  color:grey;
+  text-decoration:line-through;
+}
+
+.checkbox {
+  float:left;
+  width:25px;
+  height:25px;
+  border:2px solid grey;
+  border-radius:3px;
+  margin-right:10px;
+}
+
+.checkbox:hover {
+  background-color:#AAE4AE;
+}
+
+.checkbox:active {
+  background-color:#7ED083;
+}
+
+.completed .checkbox {
+  background-color:#7ED083;
+}
+
+.delete {
+  float:right;
+  height:25px;
+  width:25px;
+  border-radius:3px;
+  background-color:#FF9D9A;
+  color:white;
+}
+
+.delete:hover {
+  background-color:#FFC0BF;
+}

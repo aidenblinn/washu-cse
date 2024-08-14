@@ -1,0 +1,111 @@
+body {
+  background-color:hsl(0, 0%, 88%);
+}
+
+#sortbutton {
+  position:absolute;
+  left: 50%;
+  margin-left:-20px;
+  margin-top:-47px;
+  height:32px;
+  width:80px;
+  border-radius:3px;
+  font-size:16px;
+  background-color:#303030;
+  color:white;
+}
+
+#todo {
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:65px;
+  padding:20px;
+  width:65%;
+  border: 2px solid grey;
+  border-radius:4px;
+  background:white;
+}
+
+@media only screen and (max-width: 768px) {
+  #todo {
+    width:85%;
+  }
+}
+
+#newName {
+  border-style: none;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#newName:focus {
+  outline:none;
+}
+
+#submit {
+  float:right;
+  height:25px;
+  width:25px;
+  border-radius:3px;
+  background-color:#D580AE;
+  color:white;
+}
+
+.todoItem {
+  margin-top:20px;
+  margin-bottom:20px;
+}
+
+.todoItem:last-of-type {
+  border-bottom:none;
+}
+
+.todoItem p {
+  width:70%;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  display:inline;
+}
+
+.completed {
+
+}
+
+.completed p {
+  color:grey;
+  text-decoration:line-through;
+}
+
+.checkbox {
+  float:left;
+  width:25px;
+  height:25px;
+  border:2px solid grey;
+  border-radius:3px;
+  margin-right:10px;
+}
+
+.checkbox:hover {
+  background-color:#AAE4AE;
+}
+
+.checkbox:active {
+  background-color:#7ED083;
+}
+
+.completed .checkbox {
+  background-color:#7ED083;
+}
+
+.delete {
+  float:right;
+  height:25px;
+  width:25px;
+  border-radius:3px;
+  background-color:#FF9D9A;
+  color:white;
+}
+
+.delete:hover {
+  background-color:#FFC0BF;
+}

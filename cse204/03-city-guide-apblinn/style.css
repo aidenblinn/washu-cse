@@ -1,0 +1,178 @@
+.welcome {
+  font-style: italic;
+}
+
+#form {
+  background-color: LightBlue;
+}
+
+.cost {
+  color: #013220;
+}
+
+#source {
+  font-size: 12px;
+}
+
+.welcome {
+  line-height: 135%;
+  text-align: justify;
+}
+
+input:focus, textarea:focus {
+  background-color: BlanchedAlmond;
+}
+
+.link:hover {
+  color: rgb(204,0,204);
+}
+
+.link {
+  color: brown;
+}
+
+#food {
+  background-color: #FFCCCB;
+}
+
+#coffee {
+  background-color:rgba(152, 118, 84, 0.4)
+}
+
+#places {
+  background-color:#FFFFE0
+}
+
+#pictures {
+  background-color: #e2fee2;
+}
+
+#introduction {
+  background-color: #f0ddff;
+  margin-top:64px;
+}
+
+.sections {
+  text-align:center;
+}
+
+#fillform {
+  font-size:14px;
+  font-weight:lighter;
+  text-align:right;
+}
+
+#title {
+  text-align:center;
+}
+
+.padded {
+  padding-left: 250px;
+  padding-right: 250px;
+  background-clip: padding-box;
+}
+
+h1, h2, .padded {
+  margin:0;
+}
+
+.pics {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:90%;
+}
+
+#comments {
+  height:250px;
+  width:100%;
+}
+
+.coffeepics {
+  float:left;
+  margin:10px;
+  margin-top:20px;
+  width:30%;
+  height:30%;
+  box-shadow: -4px -4px #555555;
+}
+
+#ascensionlink {
+  clear:left;
+}
+
+#coffeelist {
+  display:inline-block;
+  list-style-type:lower-alpha;
+  list-style-position: outside;
+}
+
+#ascensionlink {
+  clear:left;
+}
+
+
+#parklist  {
+  /* font-family: "Comic Sans MS", sans-serif; */
+  list-style-image:url(star.png);
+  list-style-position: inside;
+
+}
+
+#map {
+  margin-right: 10px;
+}
+
+#parkpic {
+  border: 1px solid black;
+}
+
+.header {
+  position:fixed;
+  top:0px;
+  background-color:#FED8B1;
+  width:100%;
+}
+
+table {
+  margin-top:10px;
+  width:70%;
+  padding:3px;
+  letter-spacing:1px;
+  text-align:left;
+}
+
+table tr:hover {
+  background-color:#d3d3d3
+}
+
+#headertext {
+  padding: 8px;
+}
+
+#formyform {
+  font-size:15px;
+  border:1px solid black;
+  border-radius:10px 10px 10px 10px;
+  padding: 10px;
+}
+
+#submit {
+  border-bottom: 1px solid blue;
+  text-shadow: 1px 1px #ff0000;
+}
+
+.parkdesc {
+  float:left;
+  width:40%;
+  padding:5px;
+}
+
+.hours {
+  clear:left;
+  padding:5px;
+}
+
+table, th, td {
+  border: 1px solid black;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- Documentation: navbar and fluid container syntax / CSS borrowed from https://getbootstrap.com/
+additionally, jQuery scripts and carousel borrowed from same resource-->
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Suzanne Collins Books</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark justify-content-center">
+    <a class="navbar-brand" href="#">Suzanne Collins Books</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="#">In the Press</a>
+        <a class="nav-item nav-link" href="#">Bookstore</a>
+        <a class="nav-item nav-link" href="#">Merch</a>
+      </div>
+    </div>
+  </nav>
+  <div class="body container-fluid">
+    <div class="row hero">
+      <div class="col-xs-12">
+        <img id="heroimg" src="hero2.jpg" alt="New Suzanne Collins book promo image">
+      </div>
+    </div>
+  </div>
+  <div class="hungerseries container-fluid">
+    <div class="row books">
+      <div class="col-xs-12 col-md-8 hungerwords">
+        <h1 class="header hungertext">The Hunger Games series</h1>
+        <p class="hungertext body">At its core, the story of The Hunger Games is about the power of one person to change the world.</p>
+        <p class="hungertext body">Set in the future remnants of the USA in a new nation called Panem, one male and one female “tribute” between the ages of 11 and 18 from each of Panem’s twelve districts is forced to participate in an annual competition called the Hunger Games, which is broadcast live throughout the country for the entertainment of the Capitol’s wealthy residents.</p>
+        <p class="hungertext body">The novels were all well received. In August 2012, the series ranked second, exceeded only by the Harry Potter series in NPR's poll of the top 100 teen novels, which asked voters to choose their favorite young adult books. On August 17, 2012, Amazon announced The Hunger Games trilogy as its top seller, surpassing the record previously held by the Harry Potter series. As of 2014, the trilogy has sold more than 65 million copies in the U.S. alone (more than 28 million copies of The Hunger Games, more than 19 million copies of Catching Fire, and more than 18 million copies of Mockingjay). The Hunger Games trilogy has been sold into 56 territories in 51 languages to date.</p>
+        <p class="hungertext body">Interested in buying a copy of <em>The Hunger Games</em> for your child? Check out <a href="https://www.commonsensemedia.org/book-reviews/the-hunger-games-book-1">Common Sense Media</a> to see if this book is appropriate for your family.</p>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <img class="img-fluid trilogypic" src="trilogy.jpg" alt="Hunger Games series book covers">
+      </div>
+    </div>
+  </div>
+  <div class="author container-fluid">
+    <div class="row about">
+      <div class="col-xs-12 col-md-4">
+        <img class="img-fluid collinspic" src="authorpic.jpg" alt="Picture of author Suzanne Collins">
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <h1 class="header">About the Author</h1>
+        <p class="body">In 1991, Suzanne Collins began her professional career writing for children's television. She worked on the staffs of several Nickelodeon shows, including the Emmy-nominated hit Clarissa Explains it All and The Mystery Files of Shelby Woo. For preschool viewers, she penned multiple stories for the Emmy-nominated Little Bear and Oswald. She also co-wrote the Rankin/Bass Christmas special, Santa, Baby! with her friend, Peter Bakalian, which was nominated for a WGA Award in Animation. Most recently she was the Head Writer for Scholastic Entertainment's Clifford's Puppy Days,and a freelancer on Wow! Wow! Wubbzy! While working on a Kids WB show called Generation O! she met children's author and illustrator James Proimos, who talked her into giving children's books a try.</p>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <p class="body">Thinking one day about Alice in Wonderland, she was struck by how pastoral the setting must seem to kids who, like her own, lived in urban surroundings. In New York City, you're much more likely to fall down a manhole than a rabbit hole and, if you do, you're not going to find a tea party. What you might find...? Well, that's the story of Gregor the Overlander, the first book in her five-part fantasy/war series, The Underland Chronicles,which became a New York Times bestseller. It has been sold into 21 foreign territories.</p>
+        <p class="body">Her next series, The Hunger Games Trilogy, is an international bestseller. The Hunger Games has spent over six years to date on The New York Times bestseller list since publication in September 2008, and has also appeared consistently on USA Today and Publishers Weekly bestseller lists. It has been sold into 56 territories in 51 languages. In 2010 Collins was named to the TIME 100 list as well as the Entertainment Weekly Entertainers of the Year list.</p>
+      </div>
+    </div>
+  </div>
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="carousel1.png" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="carousel2.png" alt="Second slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+.playlists{
+    text-align: left;
+    padding-left: -30px;
+}
+
+.playlistFunctions{
+    padding: 40px;
+    margin: 20px;
+    background-color: white;
+    background-image: none;
+    display: flex;
+    flex-wrap: row;
+      
+}
+
+@media only screen and (max-width: 840px){
+    .playlistFunctions {
+        display: grid;
+    }
+}
+
+input{
+    margin-left: 20px;
+}
+
+a{
+    font-size: larger;
+}
+
+.slidDiv {
+    margin-bottom: 5%;
+    /* display: flex; */
+}
+
+.rangeLabel {
+    margin-left: 15px
+}
+

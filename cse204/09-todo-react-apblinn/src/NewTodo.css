@@ -1,0 +1,18 @@
+#newName {
+  border-style: none;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#newName:focus {
+  outline:none;
+}
+
+#submit {
+  float:right;
+  height:25px;
+  width:25px;
+  border-radius:3px;
+  background-color:#D580AE;
+  color:white;
+}

@@ -1,0 +1,3 @@
+Hi! I'm Bobby. I've been here for a while now.
+Here is some sneaky stuff for the merge of a divergent branch.
+Here is an edit to practice add + commit + push.

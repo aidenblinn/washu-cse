@@ -1,0 +1,7 @@
+select students.first_name, students.last_name, students.id, students.email_address, avg(grades.grade) from grades inner join students on students.id=grades.student_id group by students.first_name having students.first_name='Jack' AND students.last_name='Johnson';
++------------+-----------+-----+------------------------------+-------------------+
+| first_name | last_name | id  | email_address                | avg(grades.grade) |
++------------+-----------+-----+------------------------------+-------------------+
+| Jack       | Johnson   | 257 | jjmuzak@brushfirerecords.com | 96.125000         |
++------------+-----------+-----+------------------------------+-------------------+
+1 row in set (0.00 sec)

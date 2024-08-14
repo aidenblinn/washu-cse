@@ -1,0 +1,8 @@
+select students.first_name,students.last_name,avg(grades.grade) from grades inner join students on students.id=grades.student_id group by grades.student_id having avg(grades.grade) < 50;
++------------+-----------+-------------------+
+| first_name | last_name | avg(grades.grade) |
++------------+-----------+-------------------+
+| Ben        | Harper    | 43.500000         |
+| Tim        | Armstrong | 45.000000         |
++------------+-----------+-------------------+
+2 rows in set (0.00 sec)

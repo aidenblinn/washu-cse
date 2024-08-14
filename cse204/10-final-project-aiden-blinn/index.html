@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SongSurfer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container" id="start">
+      <div class="row welcomescreen">
+        <div class="col-md-3 col-xs-2">
+        </div>
+        <div class="col-md-6 col-xs-8" id="welcome">
+          <h3 id = "welcometo">welcome to</h3>
+          <h1>SongSurfer</h1>
+          <div id="spacer">
+          </div>
+          <p class="warning welcometext">WARNING: THIS SITE PLAYS AUDIO</p>
+          <p class="welcometext">Hi there! Welcome to SongSurfer.</p>
+          <p class="welcometext">I've created this music discovery website so that you can find songs that you enjoy, discover artists
+          you may not be familiar with, and keep up to date with new and relevant music.</p>
+          <p class="welcometext">To get started, just hit the close button below. Once on my main site, you'll be able to play / pause the currently playing
+            music and navigate to other songs. To post your favorite lyrics so that you can keep track of your favorite moments, scroll to the bottom of the page.</p>
+          <p class="welcometext">I hope you enjoy playing around with the site!</p>
+          <div class="holder">
+            <button id="close" type="button" name="button">Close</button>
+          </div>
+        </div>
+        <div class="col-md-3 col-xs-2">
+        </div>
+      </div>
+    </div>
+    <div class="container" id="main">
+      <h1 id="title">SongSurfer</h1>
+      <div class="row">
+        <div class="col-md-1 col-xs-0">
+        </div>
+        <div class="col-md-6 col-xs-12">
+          <div id="album">
+            <img id = "bigImg" src="01.jpg" alt="Album cover for currently playing song">
+          </div>
+          <div class="playpause">
+            <img id="backarrow" src="prev.png" alt="Back arrow">
+            <img id="play" src="play.png" alt="Play button">
+            <img id="pause" src="pause.png" alt="Pause button">
+            <img id="forwardarrow" src="next.png" alt="Forward arrow">
+          </div>
+        </div>
+        <div class="col-md-4 col-xs-12">
+          <div class="tracklist">
+            <ol>
+              <li><a href="https://music.apple.com/us/album/sometimes-i-sit-and-think-and-sometimes-i-just-sit/960342539" target="_blank">Courtney Barnett – An Illustration of Loneliness (Sleepless in New York)</a></li>
+              <li><a href="https://music.apple.com/us/album/22-a-million/1141107722" target="_blank">Bon Iver – 33 "GOD"</a></li>
+              <li><a href="https://music.apple.com/us/album/melodrama/1429662346" target="_blank">Lorde – Perfect Places</a></li>
+              <li><a href="https://music.apple.com/us/album/crack-up/1209098746" target="_blank">Fleet Foxes – On Another Ocean (January / June)</a></li>
+              <li><a href="https://music.apple.com/us/album/clap-your-hands-say-yeah/847539406" target="_blank">Clap Your Hands Say Yeah – In This Home On Ice</a></li>
+              <li><a href="https://music.apple.com/ca/album/the-moon-antarctica/215598214" target="_blank">Modest Mouse – Tiny Cities Made of Ashes</a></li>
+              <li><a href="https://music.apple.com/us/album/ok-computer/1097861387" target="_blank">Radiohead – The Tourist</a></li>
+              <li><a href="https://music.apple.com/us/album/is-this-it/266376953" target="_blank">The Strokes – Someday</a></li>
+              <li><a href="https://music.apple.com/us/album/emergency-i/6561716" target="_blank">The Dismemberment Plan – The City</a></li>
+              <li><a href="https://music.apple.com/us/album/merriweather-post-pavilion/301756963" target="_blank">Animal Collective – Daily Routine</a></li>
+              <li><a href="https://music.apple.com/us/album/funeral/1249417623" target="_blank">Arcade Fire – Une Année Sans Lumière</a></li>
+              <li><a href="https://music.apple.com/us/album/in-rainbows/1109714933" target="_blank">Weird Fishes / Arpeggi – Radiohead</a></li>
+            </ol>
+          </div>
+        </div>
+          </div>
+        <div class="col-md-1 col-xs-0">
+        </div>
+      </div>
+    </div>
+    <div class="container" id="explore">
+      <h1 id="artist">Artist of the Month:</h1>
+      <h3>Dua Lipa</h3>
+      <h5>(Information thanks to Wikipedia)</h5>
+      <div class="row">
+        <div class = "col-xs-12 col-md-8" id="abouttext">
+          <p id = "DuaLipa"></p>
+          <p>Source: <a href="https://en.wikipedia.org/wiki/Dua_Lipa">https://en.wikipedia.org/wiki/Dua_Lipa</a></p>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <img class="img-fluid" src="dua.jpg" alt="Picture of singer Dua Lipa">
+        </div>
+      </div>
+    </div>
+    <div class="lyrics">
+      <div id="lyricWrapper">
+        <h3>Submit your favorite lyrics</h3>
+        <input id = "typeLyric" type="text" placeholder="Type in your favorite lyric you've heard...">
+        <button id="addLyric" type="button" name="button">Submit lyric</button>
+        <div id="inputlyrics">
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <p id = "footertext">Desgined by Aiden Blinn</p>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <style>
+        html * {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        div {
+            margin:auto;
+            width:50%;
+            padding-top:5%;
+        }
+        label {
+            color: #0e20c2;
+        }
+        label > input {
+            border: none;
+            background: #20C20E;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="calculator">
+        <form action="calculator.php" method="get">
+            <label for="1">first number:
+                <input type="text" name="1" id="1"/>
+            </label>
+            <br>
+            <label for="2">second number:
+                <input type="text" name="2" id="2"/>
+            </label>
+            <br>
+            <br>
+            <input type="radio" name = "operation" value="add" id="add">
+            <label for="add">add</label>
+            <input type="radio" name = "operation" value="subtract" id="subtract">
+            <label for="add">subtract</label>
+            <input type="radio" name = "operation" value="multiply" id="multiply">
+            <label for="add">multiply</label>
+            <input type="radio" name = "operation" value="divide" id="divide">
+            <label for="add">divide</label>
+            <br>
+            <br>
+            <input type="submit" value="Calculate">
+        </form>
+    </div>
+  </body>
+</html>
